@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./services/user-service:/app
+    restart: always
+
+  product-service:
+    build: ./services/product-service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./services/product-service:/app
+    restart: always
+
+  order-service:
+    build: ./services/order-service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./services/order-service:/app
+    restart: always
+
+  notification-service:
+    build: ./services/notification-service
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./services/notification-service:/app
+    restart: always
