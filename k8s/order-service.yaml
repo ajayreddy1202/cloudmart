@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: cloudmart-order-service
-        imagePullPolicy: Never
+        image: 797795453978.dkr.ecr.ap-south-1.amazonaws.com/cloudmart-order-service:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8002
 ---
